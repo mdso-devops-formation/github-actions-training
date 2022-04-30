@@ -1,0 +1,19 @@
+name: mdso-workflow
+
+on:
+  pull_request:
+    branches: [ main ]
+    
+jobs: 
+  
+  display-files:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: afficher
+        run: pwd
+      - name: creer fichier
+        run: touch elgourmat.yml
+      - name: afficher
+        run: echo "coucouuuu tout le monde" > elgourmat.yml
+      - name: afficher le contenu du fichier  
+        run: cat elgourmat.yml
