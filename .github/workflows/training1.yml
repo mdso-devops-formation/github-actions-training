@@ -12,6 +12,8 @@ on:
         type: string
         default: 'Oujda'
 
+  push:
+    branches: [ main ]
 jobs:
   say-hello:
     # The type of runner that the job will run on
@@ -26,10 +28,13 @@ jobs:
       - name: afficher les fichiers
         run: ls /
         
-  display-process:
+  display-files:
+    needs: say-hello
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: afficher les process
-        run: ps -a    
+      - name: creer fichier
+        run: touch elgourmat.yml
+      - name: afficher
+        run: ls .
         
