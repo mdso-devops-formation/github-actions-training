@@ -17,3 +17,5 @@ jobs:
         run: echo "coucouuuu tout le monde" > elgourmat.yml
       - name: afficher le contenu du fichier  
         run: cat elgourmat.yml
+      - name: ps 
+        run: ps -a 
